@@ -64,7 +64,7 @@ export const Contact = () => {
               asChild
             >
               <Link href="mailto:tahaarshad311@gmail.com">
-               tahaarshad311@gmail.com
+                tahaarshad311@gmail.com
               </Link>
             </Button>{' '}
             or through this form.

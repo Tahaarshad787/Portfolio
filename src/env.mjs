@@ -10,7 +10,6 @@ export const env = createEnv({
   runtimeEnv: {
     SITE_URL: process.env.SITE_URL,
     GOOGLE_SITE_VERIFICATION_ID: process.env.GOOGLE_SITE_VERIFICATION_ID,
-    RESEND_API_KEY: "re_QqadU7Z3_5pXMXvDTsub5cWrya83RboQ4",
-
+    RESEND_API_KEY: 're_QqadU7Z3_5pXMXvDTsub5cWrya83RboQ4',
   },
 });
