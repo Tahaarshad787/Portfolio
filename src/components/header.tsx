@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 import Link from 'next/link';
 
 import { useActiveSection } from '@/components/active-section-provider';
-import { Button } from '@/components/button';
+import { buttonVariants } from '@/components/button';
 import {
   Dialog,
   DialogContent,
@@ -16,6 +16,7 @@ import {
 import { Icons } from '@/components/icons';
 import { ThemeToggle } from '@/components/theme-toggle';
 import { links } from '@/lib/data';
+import { cn } from '@/lib/utils';
 
 export const Header = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -29,14 +30,13 @@ export const Header = () => {
       className="sm:bg-background/80 sticky top-5 z-20 my-5 flex items-center gap-2 sm:top-10 sm:my-10 sm:rounded-full sm:border sm:px-2 sm:py-3 sm:backdrop-blur-sm"
     >
       <Dialog open={isOpen} onOpenChange={setIsOpen}>
-        <DialogTrigger asChild>
-          <Button
-            variant="outline"
-            size="lg"
-            className="bg-background/80 backdrop-blur-sm sm:hidden"
-          >
-            Menu <Icons.chevronDown className="ml-2 size-4" />
-          </Button>
+        <DialogTrigger
+          className={cn(
+            buttonVariants({ variant: 'outline', size: 'lg' }),
+            'bg-background/80 backdrop-blur-sm sm:hidden'
+          )}
+        >
+          Menu <Icons.chevronDown className="ml-2 size-4" />
         </DialogTrigger>
         <DialogContent className="text-muted-foreground max-h-screen w-[90%] rounded">
           <DialogHeader>
